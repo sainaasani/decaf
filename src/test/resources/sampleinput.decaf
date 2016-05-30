@@ -1,0 +1,23 @@
+\#includes sampleinclude.decaf
+
+wtf
+
+if (folan) {
+    bisar();
+}
+$$
+bisar() {
+    return null;
+}
+
+main() {
+    int folan = 0x23FAB2;
+    print(folan + 453);
+    float t = 2.0;
+
+    if (x = (folan > 2 && folan < 553436)) {
+        boolean x = true;
+    }
+
+    return 0;
+}

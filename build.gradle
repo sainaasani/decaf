@@ -1,0 +1,18 @@
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+task jflexCompile(type: JavaExec) {
+    main '-jar'
+    args = ['C:/jflex-1.6.1/lib/jflex-1.6.1.jar', '-q', '-d', 'src/jflex/out', 'src/jflex/*.jflex']
+}

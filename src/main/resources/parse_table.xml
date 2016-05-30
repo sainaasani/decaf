@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<parstable start="program">
+    <var name="dec">
+        <terminal class="model.Keyword" keyword="model.Keywords.INT">
+            <var name="list"/>
+            <terminal class="model.Symbol" symbol="model.Symbols.SEMICOLON">;</terminal>
+        </terminal>
+    </var>
+    <var name="list">
+        <terminal class="model.Identifier">
+            <var name="l2"/>
+        </terminal>
+    </var>
+    <var name="l2">
+        <terminal class="model.Symbol" symbol="model.Symbols.COMMA">
+            <var name="list"/>
+        </terminal>
+        <terminal class="model.Symbol" symbol="model.Symbols.SEMICOLON"/>
+        <terminal class="null"/> <!-- EOF -->
+    </var>
+</parstable>

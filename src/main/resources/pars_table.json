@@ -1,0 +1,49 @@
+{
+  "parstable": {
+    "start":"dec",
+    "vars":[
+      {
+        "name":"dec",
+        "rules":[
+          {
+            "first": {"class":"model.Keyword", "keyword":"model.Keywords.INT"},
+            "rule":[
+              {"class":"var", "name":"list"},
+              {"class":"model.Symbol", "symbol":"model.Symbols.SEMICOLON"}
+            ]
+          }
+        ]
+      },
+      {
+        "name":"list",
+        "rules":[
+          {
+            "first": {"class":"model.Identifier"},
+            "rule":[
+              {"class":"var", "name":"l2"}
+            ]
+          }
+        ]
+      },
+      {
+        "name":"l2",
+        "rules":[
+          {
+            "first": {"class":"model.Symbol", "symbol":"model.Symbols.COMMA"},
+            "rule":[
+              {"class":"var", "name":"list"}
+            ]
+          },
+          {
+            "first": {"class":"model.Symbol", "symbol":"model.Symbols.SEMICOLON"}
+            "rule": []
+          },
+          {
+            "first": {"class":"EOF"},
+            "rule": []
+          }
+        ]
+      }
+    ]
+  }
+}
