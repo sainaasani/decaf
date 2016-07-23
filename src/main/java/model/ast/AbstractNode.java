@@ -6,36 +6,36 @@ import java.util.Collection;
 /**
  * Created by Majid Vaghari on 7/23/2016.
  */
-public abstract class AbstractNode implements ASTNode {
-    private final ASTNode                       parent;
-    private       Collection<? extends ASTNode> children;
+public abstract class AbstractNode implements Node {
+    private final Node             parent;
+    private       Collection<Node> children;
 
-    public AbstractNode(ASTNode parent) {
+    public AbstractNode(Node parent) {
         this(parent, new ArrayList<>());
     }
 
-    protected AbstractNode(ASTNode parent, Collection<? extends ASTNode> children) {
+    protected AbstractNode(Node parent, Collection<Node> children) {
         this.parent = parent;
         this.children = children;
     }
 
     @Override
-    public ASTNode getParent() {
+    public Node getParent() {
         return parent;
     }
 
     @Override
-    public void addChild(ASTNode node) {
+    public void addChild(Node node) {
         children.add(node);
     }
 
     @Override
-    public void addChildren(Collection<? extends ASTNode> nodes) {
-        addHelper(children, nodes);
+    public void addChildren(Collection<? extends Node> nodes) {
+        children.addAll(nodes);
     }
 
     @Override
-    public Collection<? extends ASTNode> getChildren() {
+    public Collection<Node> getChildren() {
         return children;
     }
 }

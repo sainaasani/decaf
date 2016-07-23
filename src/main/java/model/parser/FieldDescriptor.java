@@ -1,4 +1,4 @@
-import model.Type;
+import model.type.Type;
 
 public class FieldDescriptor {
   private String name;

@@ -5,19 +5,19 @@ import java.util.Collection;
 /**
  * Created by Majid Vaghari on 7/23/2016.
  */
-public class Statement implements ASTNode {
+public class Statement implements Node {
     @Override
-    public ASTNode getParent() {
+    public Node getParent() {
         return null;
     }
 
     @Override
-    public void addChild(ASTNode node) {
+    public void addChild(Node node) {
 
     }
 
     @Override
-    public void addChildren(Collection<? extends ASTNode> nodes) {
+    public void addChildren(Collection<? extends Node> nodes) {
 
     }
 }

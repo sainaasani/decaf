@@ -1,4 +1,4 @@
-package model;
+package model.type;
 
 /**
  * Created by Majid Vaghari on 4/2/2016.
