@@ -1,14 +1,20 @@
 package model.AST;
 
-public class While extends Statement{
+public class While extends Statement {
 
 	public While(Block parent) {
 		super(parent);
 		// TODO Auto-generated constructor stub
 	}
-	Expression getExpression(){
+
+	Expression getExpression() {
 		Expression e = null;
 		return e;
+	}
+
+	Block getBodyBlock() {
+		Block b = null;
+		return b;
 	}
 
 }
