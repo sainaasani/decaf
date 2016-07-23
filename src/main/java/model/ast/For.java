@@ -1,4 +1,4 @@
-package model.AST;
+package model.ast;
 
 public class For extends Statement{
 
@@ -17,6 +17,10 @@ public class For extends Statement{
 	Assignment getAssignment2(){
 		Assignment a2 = null;
 		return a2;
+	}
+	Block getBodyBlock(){
+		Block b = null;
+		return b;
 	}
 
 }
