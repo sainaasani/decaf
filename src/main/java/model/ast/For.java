@@ -10,5 +10,13 @@ public class For extends Statement{
 		Expression e = null;
 		return e;
 	}
+	Assignment getAssignment1(){
+		Assignment a1 = null;
+		return a1;
+	}
+	Assignment getAssignment2(){
+		Assignment a2 = null;
+		return a2;
+	}
 
 }
