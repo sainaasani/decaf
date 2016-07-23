@@ -60,7 +60,8 @@ import model.*;
 LineTerminator = \r|\n|\r\n
 InputCharacter = [^\r\n]
 /* comments */
-Comment = {TraditionalComment} | {EndOfLineComment} 
+Comment = {TraditionalComment} | {EndOfLineComment} | {DocumentationComment}
+DocumentationComment = "/*" "*"+ [^/*] ~"*/"
 TraditionalComment = "/*" [^*] ~"*/" | "/*" "*"+ "/"
 EndOfLineComment = "//" {InputCharacter}* {LineTerminator}?
 WhiteSpace = {LineTerminator} | [ \t\f] | {Comment}
