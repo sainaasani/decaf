@@ -1,14 +1,14 @@
 package model.ast;
 
-import model.type.FunctionType;
+import model.type.Types;
 
 /**
  * Created by Majid Vaghari on 7/23/2016.
  */
 public class Function extends AbstractNode {
-    private Block        code;
-    private FunctionType type;
-    private String       name;
+    private Types  inputType;
+    private Types  outputType;
+    private String name;
 
     public Function(Node parent) {
         super(parent);

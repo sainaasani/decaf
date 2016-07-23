@@ -1,6 +1,6 @@
 package model;
 
-import model.type.Type;
+import model.type.Types;
 
 /**
  * Created by Majid Vaghari on 4/2/2016.
@@ -11,7 +11,7 @@ public class BooleanLiteral extends Literal {
     }
 
     @Override
-    public Type getType() {
-        return Type.BOOLEAN;
+    public Types getType() {
+        return Types.BOOLEAN;
     }
 }

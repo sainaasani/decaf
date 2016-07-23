@@ -1,6 +1,6 @@
 package model;
 
-import model.type.Type;
+import model.type.Types;
 
 /**
  * Created by Majid Vaghari on 4/2/2016.
@@ -13,7 +13,7 @@ public abstract class Literal extends AbstractToken {
         this.value = value;
     }
 
-    public abstract Type getType();
+    public abstract Types getType();
 
     public String getValue() {
         return value;

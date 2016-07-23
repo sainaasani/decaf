@@ -3,7 +3,7 @@ package model.type;
 /**
  * Created by Majid Vaghari on 4/2/2016.
  */
-public enum Type {
+public enum Types {
     BOOLEAN,
     CHARACTER,
     FLOAT,
@@ -17,7 +17,7 @@ public enum Type {
      *
      * @return proper type
      */
-    public static Type parse(String type) {
+    public static Types parse(String type) {
         switch (type) {
             case "boolean":
                 return BOOLEAN;

@@ -1,6 +1,6 @@
 package model;
 
-import model.type.Type;
+import model.type.Types;
 
 /**
  * Created by Majid Vaghari on 4/2/2016.
@@ -22,7 +22,7 @@ public class CharacterLiteral extends Literal {
     }
 
     @Override
-    public Type getType() {
-        return Type.CHARACTER;
+    public Types getType() {
+        return Types.CHARACTER;
     }
 }
