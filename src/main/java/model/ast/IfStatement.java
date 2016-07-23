@@ -1,10 +1,25 @@
-package model.ast;
+package model.AST;
 
-/**
- * Created by Majid Vaghari on 7/23/2016.
- */
-public class IfStatement extends Statement {
-    public IfStatement(Block parent) {
-        super(parent);
-    }
+public class Ifstatement extends Statement {
+
+	public Ifstatement(Block parent) {
+		super(parent);
+		// TODO Auto-generated constructor stub
+	}
+
+	Expression getExpression() {
+		Expression e = null;
+		return e;
+	}
+
+	Block getTrueBodyBlock() {
+		Block b = null;
+		return b;
+	}
+
+	Block getElseBodyBlock() {
+		Block b = null;
+		return b;
+	}
+
 }
