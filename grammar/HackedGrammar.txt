@@ -9,8 +9,8 @@
 <arg_list> : <type> <id> <more_arg>
 <more_arg> : , <arg_list> | EPSILON
 <block> : { <E> }
-<E> : <type> <id> <array_dec> <more_dec> ; <E> | <id> <E2>  <E> | if ( <expr> ) <block> <F> <E> | while ( <expr> ) <block> <E> | for ( <assignment> ; <expr> ; <assignment> ) <block>  <E> | return <E3> ; <E> | break ; <E> | continue ; <E> | <block> <E> |  <G> <location> ; <E> | <H> <expr> ; <E> | EPSILON
-<E2> : K = <expr> ; | ( <I> ) ;
+<E> : <type> <id> <array_dec> <more_dec> ; <E> | <id> <E2>  <E> | if ( <expr> ) <block> <F> <E> | while ( <expr> ) <block> <E> | for ( <assignment> ; <expr> ; <assignment> ) <block>  <E> | return <E3> ; <E> | break ; <E> | continue ; <E> | <block> <E> |  <G> <location> ; <E> | <H> <expr> ; <E> |EPSILON
+<E2> : <K> = <expr> ; | ( <I> ) ;
 <E3> : <expr> | EPSILON
 <F> : else <block> | EPSILON
 <G> : readfloat | readint | readchar 
@@ -24,23 +24,24 @@
 // <method_name> : <id>
 <location> : <id> <K>
 <K> : [<expr>] <K> | EPSILON
-<expr> : <exp1> <expr0>
+<expr> : <exp1> <exp0> 
 <expr0> : || <expr> | EPSILON
 <exp1> : <exp2> <exp10>
-<exp10> : && <exp1> | EPSILON
+<exp10> : && <expr> | EPSILON
 <exp2> : <exp3> <exp20>
-<exp20> : <eq_op> <exp2> | EPSILON
+<exp20> : <eq_op> <expr> | EPSILON
 <exp3> : <exp4> <exp30>
-<exp30> : <rel_op> <exp3> | EPSILON
+<exp30> : <rel_op> <expr> | EPSILON
 <exp4> : <exp5> <exp40>
-<exp40> : <arith_op2>  <exp4> | EPSILON
+<exp40> : <arith_op2>  <expr> | EPSILON
 <exp5> : <exp6> <exp50>
-<exp50> : <arith_op1> <exp5> | EPSILON
+<exp50> : <arith_op1> <expr> | EPSILON
 <exp6> : ! <exp6> | - <exp6> | <exp7>
-<exp7> : <id> <exp71> | <literal>
+<exp7> : <id> <exp71> | <literal> | (<expr>)
 <literal> : int_literal | bool_literal | hex_literal | char_literal
 <exp71> : <K> | ( <I> )
 <arith_op1> :    * | / | %
 <arith_op2> : + | -
 <rel_op>     :    < | > | >= | <=
 <eq_op>     :  == | !=
+
